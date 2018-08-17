@@ -78,12 +78,22 @@ class App extends Component {
         <header className="header">
           <h1>todos</h1>
           <form onSubmit={this.handleSubmit}>
-            <input value={this.state.input} onChange={this.handleChange} className="new-todo" placeholder="What needs to be done?" autoFocus />
+            <input 
+              value={this.state.input} 
+              onChange={this.handleChange} 
+              className="new-todo" 
+              placeholder="What needs to be done?" 
+              autoFocus 
+            />
           </form>
         </header>
 
         <section className="main">
-          <TodoLists todoDestroy={this.todoDestroy} todoToggleClick={this.todoToggleClick} todos={this.state.todos} />
+          <TodoLists 
+            todoDestroy={this.todoDestroy} 
+            todoToggleClick={this.todoToggleClick} 
+            todos={this.state.todos} 
+          />
         </section>
 
         <footer className="footer">

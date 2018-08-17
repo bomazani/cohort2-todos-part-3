@@ -8,8 +8,14 @@ class TodoLists extends Component {
         return (
         <div>
             <ul className="todo-list">
-            {this.props.todos.map( todo => <TodoItem key={todo.id} todo={todo} todoDestroy={this.props.todoDestroy} todoToggleClick={this.props.todoToggleClick}/> )}
-
+                {this.props.todos.map( todo => 
+                    <TodoItem 
+                        key={todo.id} 
+                        todo={todo} 
+                        todoDestroy={this.props.todoDestroy} 
+                        todoToggleClick={this.props.todoToggleClick}
+                    /> 
+                )}
             </ul>
         </div>
         );
